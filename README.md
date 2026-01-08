@@ -8,8 +8,7 @@
 git clone https://github.com/oskarastrom/LatentRigidity-CLVAE.git
 cd LatentRigidity-CLVAE
 ```
-
-3. Install dependencies using
+2. Install dependencies using
 ```bash
 pip install -r requirements.txt
 ```
