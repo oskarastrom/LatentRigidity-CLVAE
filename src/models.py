@@ -4,7 +4,7 @@ import torch
 import numpy as np
 from enum import Enum
 import copy
-from utils import scatter_on_hypersphere
+from src.utils import scatter_on_hypersphere
 
 class LatentClustering(Enum):
     ZEROED = 1

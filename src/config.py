@@ -1,5 +1,5 @@
 
-from splits import get_splits
+from src.splits import get_splits
 
 class Config():
     def __init__(self, dataset='mnist', split_num=0, latent_dims=128, fixed_dims=0, lv=False):

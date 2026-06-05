@@ -5,7 +5,6 @@
 from torchvision.datasets import MNIST, SVHN, CIFAR10, CIFAR100
 from torch.utils.data import Dataset, DataLoader, Subset, ConcatDataset
 from torchvision import transforms
-import torch
 import os
 import math
 from sklearn.model_selection import train_test_split
