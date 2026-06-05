@@ -20,7 +20,7 @@ dataset_variance_settings = {
 
 def main_batch(args):
     if args.mode == "train":
-        dataset_list = ['svhn', 'tiny_imagenet', 'cifar+10', 'cifar+50'] # 'mnist', 'cifar10', 'svhn', 'tiny_imagenet', 'cifar+10', 
+        dataset_list = ['mnist', 'cifar10', 'svhn', 'tiny_imagenet', 'cifar+10', 'cifar+50']
         if args.dataset != "": dataset_list = [args.dataset]
         for dataset in dataset_list:
             base_path = "checkpoints/"
@@ -29,7 +29,6 @@ def main_batch(args):
 
             os.makedirs(base_path + dataset, exist_ok=True)
             splits = [0,1,2,3,4]
-            if dataset == "svhn": splits = [1,2,3,4]
             for split_num in splits:
                 args.split_num = split_num
                 args.known_classes = ""
@@ -39,7 +38,7 @@ def main_batch(args):
 
                 os.makedirs(base_path + dataset + "/" + str(args.split_num), exist_ok=True)
 
-                experiments = ['fa', 'fav', 'lc', 'lcv', 'lcf8', 'lcvf8', 'lcf64', 'lcvf64']
+                experiments = ['fa', 'lc', 'lcf8', 'lcf64'] # run with learned variance: 'fa', 'fav', 'lc', 'lcv', 'lcf8', 'lcvf8', 'lcf64', 'lcvf64'
                 for run in experiments:
                     args = update_args(args, run)
                     args.save_name = dataset + "_" + run

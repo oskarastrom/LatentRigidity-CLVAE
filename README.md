@@ -18,8 +18,8 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 ```
 
 
-# Run
-1. Modify the ```train_batch.py``` file to run the desired datasets, splits, and potential other variables. This script runs multiple iterations of the training process over multiple sets of parameters.
+# Run CLVAE Results
+1. Modify the ```train_batch.py``` file to run the desired datasets, splits, and potential other variables for the CLVAE model. This script runs multiple iterations of the training process over multiple sets of parameters.
 2. Run the ```train_batch.py``` script.
 ```bash
 python train_batch.py
